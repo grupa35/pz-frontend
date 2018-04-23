@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>x-wear.pl</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/includehtml.js"></script> 
+
+    </head>
+    <body onload="slide()">
+        
+        
+        <div id="container" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <div w3-include-html="views/header.html"></div> 
+
+
+            <div id="slider" style="width: 100%;
+                                    height: auto;
+                                    border-radius: 25px;
+                                    margin-left: 40px;"></div>
+            
+            <div w3-include-html="views/main.html"></div> 
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script>includeHTML();</script>
+    </body>
+</html>
