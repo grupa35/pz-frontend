@@ -5,16 +5,17 @@
 
 <body>
 	<script>
-
-	$.ajax({
-		url: "https://f717723d-fbf1-417a-bebb-e22447764772.mock.pstmn.io/info",
-		success: function(data) {
-			let message  = data['message'];
-			let tag = '<h1>' + message + 'x<h1>';
-			$('body').html(tag);
-			}
-			
-	});
+		$.getJSON( "https://839b7f56-8786-4ea6-b55f-036417d0572a.mock.pstmn.io/getPosts", function( data ) {
+		  var items = [];
+		  $.each( data, function( key, val ) {
+			 items.push( "<li id='" + key + "'><u>" + val.author + "</u> wrote: <b>" + val.content + "</b></li>" );
+		  });
+		 
+		  $( "<ul/>", {
+			 "class": "my-new-list",
+			 html: items.join( "" )
+		  }).appendTo( "body" );
+		});
 	</script>
 	</body>
 
