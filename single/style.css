@@ -1,0 +1,163 @@
+body {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: black;
+}
+
+header {
+    width: 95%;
+    height: 120px;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 25px;
+
+}
+
+#navbar {
+    width: 95%;
+    height: 45px;
+    border: 1px outset black;
+    border-radius: 25px;
+    margin-top: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, black, lightgrey);
+}
+
+li {
+    margin-top: 3px;
+    margin-left: 2px;
+    float: left;
+    display: inline-block;
+
+}
+ 
+li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    width: 120px;
+    height: 50px;
+    line-height: 45px;
+    margin-top: -4px;
+}
+
+#container {
+    width: 70%; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#main {
+    width: 1093px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.lista {
+    width: 70%;
+    float: left;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+
+
+.lista div {
+    
+    height: 200px;
+    display: block;
+    margin-bottom: 25px;
+    border-bottom: 1px solid black;
+}
+
+.lista div img {
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.lista div h1 {
+    float: right;
+    margin-right: 150px;
+    margin-top: 5px;
+    font-family: monospace;
+    font: courier;
+    font-style: italic;
+}
+
+
+.lista div text {
+    float: left;
+    margin-left: 200px;
+    margin-top: -130px;
+}
+
+.lista div p {
+    float: right;
+    margin-top: -65px;
+}
+
+
+#kup {
+    float: right;
+    margin-top: -40px;
+    margin-right: 5px;
+}
+
+#kup:hover {
+    border: 1px inset lightgrey;
+}
+
+#rozwin {
+    float: right;
+    margin-top: -40px;
+    margin-right: 117px;
+}
+
+#rozwin:hover {
+    border: 1px inset lightgrey;
+}
+
+
+.filtry {
+    width: 20%;
+    float: left;
+    margin-top: 100px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    margin-left: -20%;
+}
+
+#kat {
+    font-family: monospace;
+    font: courier;
+    text-align: center;
+}
+
+.kategorie {
+    width: 20%;
+    height: 70px;
+    float: left;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+#buy{
+    background-color: lightgrey;
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
