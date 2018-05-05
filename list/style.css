@@ -76,7 +76,7 @@ li a:hover {
 }
 
 .lista div {
-    
+
     height: 200px;
     display: block;
     margin-bottom: 25px;
@@ -135,7 +135,6 @@ li a:hover {
     margin-top: 100px;
     border: 2px solid grey;
     border-radius: 10px;
-    margin-left: -20%;
     font-family: 'Oswald', sans-serif;
     
 }
