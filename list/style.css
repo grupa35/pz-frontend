@@ -35,13 +35,15 @@ header img {
 li {
     margin-top: 3px;
     float: left;
+    margin-left: -1px;
 }
  
 li a {
     display: block;
     color: white;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     width: 120px;
     height: 50px;
@@ -78,7 +80,7 @@ li a:hover {
     height: 200px;
     display: block;
     margin-bottom: 25px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px dashed grey;
 }
 
 .lista div img {
@@ -89,17 +91,10 @@ li a:hover {
     border-radius: 10px;
 }
 
-.lista div h1 {
-    float: right;
-    margin-right: 150px;
-    margin-top: 5px;
-    font-family: monospace;
-    font: courier;
-    font-style: italic;
-}
 
 
 .lista div text {
+    font-family: 'Oswald', sans-serif;
     float: left;
     margin-left: 200px;
     margin-top: -130px;
@@ -115,6 +110,7 @@ li a:hover {
     float: right;
     margin-top: -40px;
     margin-right: 5px;
+    font-family: 'Oswald', sans-serif;
 }
 
 #kup:hover {
@@ -125,6 +121,7 @@ li a:hover {
     float: right;
     margin-top: -40px;
     margin-right: 117px;
+    font-family: 'Oswald', sans-serif;
 }
 
 #rozwin:hover {
@@ -136,20 +133,22 @@ li a:hover {
     width: 20%;
     float: left;
     margin-top: 100px;
-    border: 0.5px solid black;
+    border: 2px solid grey;
     border-radius: 10px;
     margin-left: -20%;
+    font-family: 'Oswald', sans-serif;
+    
 }
 
 #filtruj {
     float: left;
     margin-left: 40%;
     margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
 }
 
 #kat {
-    font-family: monospace;
-    font: courier;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
@@ -159,6 +158,7 @@ li a:hover {
     float: left;
     margin-left: 2.5%;
     margin-top: 10px;
-    border: 0.5px solid black;
+    border: 2px solid grey;
     border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
 }
