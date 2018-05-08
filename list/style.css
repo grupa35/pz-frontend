@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background: whitesmoke !important;
     background-repeat: no-repeat;
     background-size: auto;
     color: black;
@@ -23,13 +23,13 @@ header img {
 #navbar {
     width: 95%;
     height: 45px;
-    border: 1px outset black;
+    border: 2px outset white;
     border-radius: 25px;
     margin-top: 2px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 5px;
-    background: linear-gradient(to right, black, lightgrey);
+    background: linear-gradient(to right, black, lightgray);
 }
 
 li {
