@@ -1,9 +1,10 @@
 body {
-    background-color: white;
+    background: whitesmoke !important;
     background-repeat: no-repeat;
     background-size: auto;
     color: black;
 }
+
 
 header {
     width: 95%;
@@ -23,34 +24,44 @@ header img {
 #navbar {
     width: 95%;
     height: 45px;
-    border: 1px outset black;
+    border: 2px outset white;
     border-radius: 25px;
     margin-top: 2px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 5px;
-    background: linear-gradient(to right, black, lightgrey);
+    background: linear-gradient(to right, black, lightgray);
 }
 
 li {
     margin-top: 3px;
-    margin-left: 2px;
     float: left;
-    display: inline-block;
-
+    margin-left: -1px;
 }
  
 li a {
-    text-decoration: none;
     display: block;
     color: white;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
-    font-size: 15px;
-    width: 120px;
+    font-size: 18px;
+    text-decoration: none;
+    width: 100px;
     height: 50px;
     line-height: 45px;
     margin-top: -4px;
 }
+
+li a:hover {
+    background-color: white;
+    color: black;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 
 #container {
     width: 70%; 
@@ -59,7 +70,7 @@ li a {
 }
 
 #main {
-    width: 1093px;
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -71,21 +82,21 @@ li a {
     margin-top: 10px;
 }
 
-
-
 .lista div {
-    
-    height: 200px;
+
+    height: 30%;
     display: block;
     margin-bottom: 25px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px dashed grey;
+    border-top: 2px dashed grey;
 }
 
 .lista div img {
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 60%;
+    max-height: 60%;
     margin-left: 5px;
-    margin-top: 5px;
+    margin-top: 3%;
+    margin-bottom: 3%;
     border-radius: 10px;
 }
 
@@ -114,7 +125,8 @@ li a {
 #kup {
     float: right;
     margin-top: -40px;
-    margin-right: 5px;
+    margin-left: 5px;
+    font-family: 'Oswald', sans-serif;
 }
 
 #kup:hover {
@@ -123,8 +135,8 @@ li a {
 
 #rozwin {
     float: right;
-    margin-top: -40px;
-    margin-right: 117px;
+    margin-top: -65px;
+    font-family: 'Oswald', sans-serif;
 }
 
 #rozwin:hover {
@@ -133,31 +145,53 @@ li a {
 
 
 .filtry {
+    position: absolute;
     width: 20%;
     float: left;
-    margin-top: 100px;
-    border: 0.5px solid black;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    border: 2px solid grey;
     border-radius: 10px;
-    margin-left: -20%;
+    font-family: 'Oswald', sans-serif;
 }
 
+#filtruj {
+    float: left;
+    margin-left: 40%;
+    margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
 #kat {
-    font-family: monospace;
-    font: courier;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
+
 .kategorie {
+    position: absolute;
     width: 20%;
     height: 70px;
     float: left;
     margin-left: 2.5%;
     margin-top: 10px;
-    border: 0.5px solid black;
+    border: 2px solid grey;
     border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
 }
+
 #buy{
     background-color: lightgrey;
     border: 0.5px solid black;
     border-radius: 10px;
+}
+
+dt {
+    text-align: center;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
