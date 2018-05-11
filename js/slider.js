@@ -20,7 +20,7 @@ function slide()
 {
     numer++;
     if (numer>3) numer = 1;
-    var plik = "<img src=\"../imgs/slider/slajd"+numer+".jpg\" style=\"width: 95%; height: auto; margin-left: auto; margin-right: auto; border-radius: 25px;\"/>";
+    var plik = "<img src=\"imgs/slider/slajd"+numer+".jpg\" style=\"width: 95%; height: auto; margin-left: auto; margin-right: auto; border-radius: 25px;\"/>";
 
     document.getElementById("slider").innerHTML = plik; 
     $("#slider").fadeIn(300);

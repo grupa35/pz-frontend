@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
         <title>x-wear.pl</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style/liststyle.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="drop.css">
+        <link rel="stylesheet" type="text/css" href="style/drop.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script src="../js/slider.js"></script>
-        <script src="../js/includehtml.js"></script> 
+        <script src="js/slider.js"></script>
+        <script src="js/includehtml.js"></script> 
 
     </head>
     <body onload="slide()">
@@ -19,8 +19,7 @@
         
         <div id="container" style="width: 70%; margin-left: auto; margin-right: auto;">
             <!-- HEADER -->
-            <div w3-include-html="views/header.html"></div>
-
+            <div w3-include-html="partial/header.html"></div>
             <div class="row">
                 <!-- POWRÓT DO WYŻSZYCH KATEGORII (DRZEWO) -->
                 <div class="kategorie col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -33,11 +32,11 @@
 
                 <!-- SIDEBAR -->
                 <div id="sidebar" class="filtry col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                    <div w3-include-html="views/sidebar.html"></div>
+                    <div w3-include-html="partial/sidebar.html"></div>
                 </div>
                 <!--CONTENT-->
                 <div class="lista" id="content">
-                    <div w3-include-html="views/content.html"></div>
+                    <div w3-include-html="views/lista.html"></div>
                 </div>
             </div>
         </div>
