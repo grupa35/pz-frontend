@@ -1,4 +1,6 @@
 
+/* PIERWSZY POZIOM */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -21,6 +23,9 @@
     margin-left: 5px;
 }
 
+/* KONIEC PIERWSZEGO POZIOMU */
+/*-------------------------------------------*/
+
 #dropdown-menu a:hover {
     background-color: #ddd;
     border-radius: 0px;
@@ -29,3 +34,116 @@
 .dropdown:hover #dropdown-menu {
     display: block;
 }
+
+#dropdown-menu ul {
+    display: none;
+}
+
+/* KONIEC PIERWSZEGO POZIOMU */
+/*-------------------------------------------*/
+
+/*DRUGI POZIOM*/
+
+#dropdown-menu>.dropdown-submenu {
+    position: relative;
+}
+
+#dropdown-menu>.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+#dropdown-menu>.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+#dropdown-menu>.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+#dropdown-menu>.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+#dropdown-menu>.dropdown-submenu.pull-left {
+    float: none;
+}
+
+#dropdown-menu>.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* KONIEC DRUGIEGO POZIOMU */
+/*-------------------------------------------*/
+
+/* TRZECI POZIOM */
+
+#dropdown-menu1>.dropdown-submenu {
+    position: relative;
+}
+
+#dropdown-menu1>.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+#dropdown-menu1>.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+#dropdown-menu1>.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+#dropdown-menu1>.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+#dropdown-menu1>.dropdown-submenu.pull-left {
+    float: none;
+}
+
+#dropdown-menu1>.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* KONIEC TRZECIEGO POZIOMU */
+/*-------------------------------------------*/
