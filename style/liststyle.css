@@ -80,7 +80,6 @@ li>a:hover {
     height: 30%;
     display: block;
     margin-bottom: 25px;
-    border-bottom: 2px dashed grey;
     border-top: 2px dashed grey;
 }
 
@@ -167,4 +166,10 @@ dt {
     width: 20px;
     height: 20px;
     font-size: 8px;
+}
+
+.pagination>li>.active {
+    background-color: lightblue;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
