@@ -1,6 +1,6 @@
 (function($) {
     
-    let documentRoot = "//localhost/api";
+    let documentRoot = "http://shopgen.pl/dev";
     let apiRoot = "http://shopgen.pl/dev/api"; 
 
     function applyListTriggers(){
