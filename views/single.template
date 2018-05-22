@@ -1,0 +1,54 @@
+<div style="width: 70%; 
+    margin-left: auto; 
+    margin-right: auto;">
+            <div class = "row">
+                <h1><%= item.name %> - <%= item.description.value %></h1>
+                </div>
+    <div class = "row">
+        <div id="gallery" class ="col-xs-12 col-sm-8 col-md-6 col-lg-6">
+            <img src="imgs/produkt_img.png"> <!-- here to change! -->
+        </div>
+        <div id="info" class ="col-xs-12 hidden-sm col-md-3 col-lg-3">
+            <ul style="list-style-type:none">
+                
+            </ul>
+        </div>
+        
+        <div id="buy" class ="col-xs-12 col-sm-2 col-md-3 col-lg-3">
+        
+
+                Cena: <%= item.price %> zł
+                <br>
+                
+
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Rozmiary
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu sizes" item-width="30px">
+                            <li><a href="#">XL</a></li>
+                            <li><a href="#">L</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">S</a></li>
+                        </ul>
+                    
+                
+            
+            
+        </div>
+    
+    </div>
+    <div class = "row">
+        <hr>
+    </div>
+
+    <div class = "row">
+        <div class = "col-xs 0 col-sm-2"></div>
+        <div class = "col-xs 12 col-sm-8">
+            <p><%= item.description.name %></p>
+        </div>
+        <div class = "col-xs 0 col-sm-2"></div>
+    </div>
+</div>
+
+                
+
+

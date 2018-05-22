@@ -1,22 +1,46 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>x-wear.pl</title>
+        <link rel="stylesheet" type="text/css" href="style/liststyle.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style/drop.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="js/slider.js"></script>
+		
+    </head>
+    <body onload="slide()">
+        
+        
+        <div id="container" style="width: 70%; margin-left: auto; margin-right: auto;">
+			<!-- HEADER -->
+			
+            <div id="header">
+				
+			</div>
+            <div class="row">
+                <div id="backCategories">
+                    <!-- POWRÓT DO WYŻSZYCH KATEGORII (DRZEWO) -->
+                    <div class="kategorie col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+                        <p style="float: left; margin-left: 10px; margin-top: 10px;">Tu bedzie powrót do wyższych kategorii</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="content">
+				
+            </div>
+            
 
-<body>
-	<script>
-		$.getJSON( "https://839b7f56-8786-4ea6-b55f-036417d0572a.mock.pstmn.io/getPosts", function( data ) {
-		  var items = [];
-		  $.each( data, function( key, val ) {
-			 items.push( "<li id='" + key + "'><u>" + val.author + "</u> wrote: <b>" + val.content + "</b></li>" );
-		  });
-		 
-		  $( "<ul/>", {
-			 "class": "my-new-list",
-			 html: items.join( "" )
-		  }).appendTo( "body" );
-		});
-	</script>
-	</body>
-
+        </div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/sammy-0.7.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sammy-template.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

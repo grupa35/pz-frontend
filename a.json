@@ -1,0 +1,101 @@
+[
+    {
+        "id": "5af88e985011f42f5e0cf66c",
+        "name": "New Look",
+        "price": 79.90,
+        "imgUrl": "img-url",
+        "category": {
+            "id": "5af88b625011f42f5ef8b7af",
+            "name": "kobieta",
+            "subcategories": [
+                {
+                    "id": "5af88b625011f42f5ef8b791",
+                    "name": "koszule/sukienki",
+                    "subcategories": [
+                        {
+                            "id": "5af88b625011f42f5ef8b78d",
+                            "name": "t-shirt",
+                            "subcategories": []
+                        },
+                        {
+                            "id": "5af88b625011f42f5ef8b78e",
+                            "name": "koszule",
+                            "subcategories": []
+                        },
+                        {
+                            "id": "5af88b625011f42f5ef8b78f",
+                            "name": "top",
+                            "subcategories": []
+                        },
+                        {
+                            "id": "5af88b625011f42f5ef8b790",
+                            "name": "bluzki",
+                            "subcategories": []
+                        }
+                    ]
+                },
+                {
+                    "id": "5af88b625011f42f5ef8b798",
+                    "name": "spodnie",
+                    "subcategories": []
+                },
+                {
+                    "id": "5af88b625011f42f5ef8b794",
+                    "name": "sukienki",
+                    "subcategories": [
+                        {
+                            "id": "5af88b625011f42f5ef8b793",
+                            "name": "wieczorowe",
+                            "subcategories": []
+                        },
+                        {
+                            "id": "5af88b625011f42f5ef8b792",
+                            "name": "koktajlowe",
+                            "subcategories": []
+                        }
+                    ]
+                },
+                {
+                    "id": "5af88b625011f42f5ef8b797",
+                    "name": "spodnice",
+                    "subcategories": [
+                        {
+                            "id": "5af88b625011f42f5ef8b795",
+                            "name": "mini",
+                            "subcategories": []
+                        },
+                        {
+                            "id": "5af88b625011f42f5ef8b796",
+                            "name": "maxi",
+                            "subcategories": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "sizeToAmountMap": {
+            "44": 20,
+            "34": 34,
+            "46": 25,
+            "36": 44,
+            "48": 23,
+            "38": 40,
+            "50": 15,
+            "40": 20,
+            "42": 20,
+            "32": 25
+        },
+        "description": {
+            "id": null,
+            "name": "Opis",
+            "value": "Trampki Superstar."
+        }
+    },
+    {
+        "id": "5af88e985011f42f5e0cf66d",
+        "name": "Topshop",
+        "price": 149.90,
+        "imgUrl": "img-url",
+        "category": {
+            "id": "5af88b625011f42f5ef8b7af",
+            "name": "kobieta","su

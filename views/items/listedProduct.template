@@ -1,0 +1,7 @@
+<div name="<%= item.id %>">
+    <h3 style="float: right; font-family: 'Oswald', sans-serif;"><%= item.name %> - <%= item.description.value %></h3>
+    <img src="imgs/produkt_img.png">
+    <p>Cena: <%= item.price %>,-</p>
+    <button type="submit" href="#" id="kup" class="btn-primary btn-xs">Do koszyka</button>
+    <a href="<%= root %>/#/product/<%= item.id %>"><button type="submit" href="#" id="rozwin" class="btn-primary btn-xs">Szczegóły</button></a>       
+</div>
