@@ -1,8 +1,18 @@
 <div class="row">
+    <button id="log_in"  style="float: right;
+								margin-right: 40px;" onclick="displayblock();"><i class="fas fa-align-justify"></i> Zaloguj</button>
+    <div id="login_block">
+        <form method="post">
+            <input type="email" name="email_login" placeholder="e-mail"><br>
+            <input type="password" name="pass_login" placeholder="password"><br>
+            <button type="submit" name="submit_login" style="margin-top: 2px;">Zaloguj</button>
+			<button type="button" name="goto_reg" style="margin-top: 2px;" onclick="showRegister();">Register</button>
+        </form>
+    </div>
     <header>
-        <a href="#/"><img src="imgs/logo.png"></a>
+        <a href="index.html"><img src="imgs/logo.png"></a>
     </header>
-</div>
+</div> 	
 
 
 <div class="hidden-xs hidden-sm">

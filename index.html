@@ -22,14 +22,7 @@
             <div id="header">
 				
 			</div>
-            <div class="row">
-                <div id="backCategories">
-                    <!-- POWRÓT DO WYŻSZYCH KATEGORII (DRZEWO) -->
-                    <div class="kategorie col-lg-2 col-md-2 col-sm-12 col-xs-12" >
-                        <p style="float: left; margin-left: 10px; margin-top: 10px;">Tu bedzie powrót do wyższych kategorii</p>
-                    </div>
-                </div>
-            </div>
+            
             
             <div id="content">
 				
@@ -42,5 +35,23 @@
 		<script src="js/sammy-template.js" type="text/javascript" charset="utf-8"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="js/script.js"></script>
+		<script>
+			function displayblock() {
+				if(action == 1) {
+					document.getElementById("login_block").style.display  = 'block';
+					action = 2;
+				} else {
+					document.getElementById("login_block").style.display  = 'none';
+					action = 1;
+				}
+			}
+			
+			function showRegister() {
+				$("#content").load("views/register.html");
+				document.getElementById("slider").style.display = 'none';
+				document.getElementById("login_block").style.display  = 'none';
+				action = 1;
+			}	
+		</script>
     </body>
 </html>

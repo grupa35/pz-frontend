@@ -1,3 +1,4 @@
+var action = 1;
 (function($) {
     
     let documentRoot = "http://shopgen.pl/dev";
@@ -35,6 +36,21 @@
         });
     }
 
+    function applySearchTriggers(){
+        $("button#search").on("click",function(){
+            let syntax = "";
+            let andSign = false;
+            let name = $('#searchbox input[name="name"]').val();
+
+            if (name != '') {
+                syntax += "name=" + name;
+                andSign = true;
+            }
+            if(syntax !=undefined && syntax !="")
+                $(location).attr('href', documentRoot+"/#/search/"+syntax);
+        });
+    }
+
     let app = $.sammy(function() {
 
         this.use('Template');
@@ -45,7 +61,7 @@
                 applyListTriggers();
               });
             $("#backCategories").show();
-
+            
             $.getJSON( apiRoot + "/products?page=1&size=10", function( data ) {
                 $.each( data.content, function( index, value ){
                     context.render('views/items/listedProduct.template', {item: data.content[index], root: documentRoot})
@@ -53,6 +69,10 @@
                 });
                  
 		    });
+        });
+        
+        $("button#filtruj").on("click",function(){
+            document.getElementById("login_block").style.display = "block";
         });
 
         this.get('#/product/:id', function(context) {
