@@ -8,12 +8,12 @@ function setslide(nr)
     clearTimeout(timer2);
     numer = nr-1;
     schowaj();
-    setTimeout("slide()", 300);
+    setTimeout("slide()", 500);
 }
 
 function schowaj()
 {
-    $("#slider").fadeOut(300);
+    $("#slider").fadeOut(500);
 }
 
 function slide()
@@ -23,8 +23,8 @@ function slide()
     var plik = "<img src=\"imgs/slider/slajd"+numer+".jpg\" style=\"width: 95%; height: auto; margin-left: auto; margin-right: auto; border-radius: 25px;\"/>";
 
     document.getElementById("slider").innerHTML = plik; 
-    $("#slider").fadeIn(300);
+    $("#slider").fadeIn(500);
             
     timer1= setTimeout("slide()", 4950);
-    timer2= setTimeout("schowaj()", 4700);
+    timer2= setTimeout("schowaj()", 4500);
 }
