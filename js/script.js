@@ -31,7 +31,7 @@ $(function () {
                 syntax += "higherPrice=" + higherPrice;
                 andSign = true;
             }
-            $(location).attr('href', documentRoot + "/search/" + syntax);
+            $(location).attr('href', documentRoot + "#/search/" + syntax);
         });
     }
 
@@ -129,7 +129,7 @@ $(function () {
             $.each( data, function( index, value ){
 
                 elements.push('<li class="dropdown">\
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="/search/categoryId=' + data[index].id + '">' + data[index].name + '\
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#/search/categoryId=' + data[index].id + '">' + data[index].name + '\
                     <span class="caret"></span></a>\
                     <ul class="dropdown-menu multi-level"  id="dropdown-menu">');
 
@@ -137,16 +137,16 @@ $(function () {
                     if (data[index].subcategories[index2].subcategories[0]) {
 
                         elements.push('<li class="dropdown-submenu">\
-                                <a tabindex="-1" href="/search/categoryId=' + data[index].subcategories[index2].id + '">' + data[index].subcategories[index2].name + '</a>\
+                                <a tabindex="-1" href="#/search/categoryId=' + data[index].subcategories[index2].id + '">' + data[index].subcategories[index2].name + '</a>\
                                 <ul class="dropdown-menu" id="dropdown-menu1">');
 
                         $.each(data[index].subcategories[index2].subcategories, function (index3, value3) {
-                            elements.push('<li><a href="/search/categoryId=' + data[index].subcategories[index2].subcategories[index3].id + '">' + data[index].subcategories[index2].subcategories[index3].name + '</a></li>');
+                            elements.push('<li><a href="#/search/categoryId=' + data[index].subcategories[index2].subcategories[index3].id + '">' + data[index].subcategories[index2].subcategories[index3].name + '</a></li>');
                         });
 
                         elements.push('</ul>');
 
-                    } else elements.push('<li><a href="/search/categoryId=' + data[index].subcategories[index2].id + '">' + data[index].subcategories[index2].name + '</a></li>');
+                    } else elements.push('<li><a href="#/search/categoryId=' + data[index].subcategories[index2].id + '">' + data[index].subcategories[index2].name + '</a></li>');
                 });
 
 
