@@ -201,9 +201,9 @@ dt {
 
 #dane {
     position: absolute;
-    float: right;
+    float: left;
     max-width: 30%;
-    margin-right: 50px;
+    margin-left: 35%;
     margin-top: 80px;
 }
 
