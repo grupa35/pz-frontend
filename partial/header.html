@@ -112,3 +112,21 @@
                                 border-radius: 25px;
                                 margin-left: 25px;"> </div>
 <script src="js/slider.js"></script>
+<script>
+    function displayblock() {
+        if (action == 1) {
+            document.getElementById("login_block").style.display = 'block';
+            action = 2;
+        } else {
+            document.getElementById("login_block").style.display = 'none';
+            action = 1;
+        }
+    }
+
+    function showRegister() {
+        $("#content").load("views/register.html");
+        document.getElementById("slider").style.display = 'none';
+        document.getElementById("login_block").style.display = 'none';
+        action = 1;
+    }
+</script>

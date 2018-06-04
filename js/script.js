@@ -188,6 +188,7 @@ function prepare_login_form_handler() {
 }
 
 function switch_login_items() {
+    action = 1;
     if (get_cookie('authorization').length > 0) {
         let current_user = get_current_user();
         $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
