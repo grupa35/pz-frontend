@@ -191,14 +191,17 @@ function switch_login_items() {
     if (get_cookie('authorization').length > 0) {
         let current_user = get_current_user();
         $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
-        $('#login').hide()
-        $('#logout').show()
-        $('#login_user_data').show()
+        $('#login').hide();
+        $('#logout').show();
+        $('#login_user_data').show();
+        $('#log_in').hide();
     } else {
         $('#login_user_data').html('');
-        $('#login').show()
-        $('#logout').hide()
-        $('#login_user_data').hide()
+        $('#login').show();
+        $('#logout').hide();
+        $('#login_user_data').hide();
+        $('#log_in').show();
+
     }
 }
 
@@ -276,7 +279,5 @@ function get_cookie(parameter) {
 
 function logout() {
     set_cookie('authorization', '');
-    $('#login').style = 'display: block;';
-    $('#login_user_data').style = 'display: none;';
-    $('#logout').style = 'display: none;';
+    switch_login_items();
 }
