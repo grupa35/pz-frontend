@@ -191,3 +191,38 @@ function prepare_login_form_handler() {
 
     };
 }
+
+function prepare_registration_form_handler() {
+    var form = document.getElementById("registration");
+
+    form.onsubmit = function (e) {
+        // stop the regular form submission
+        e.preventDefault();
+
+        // collect the form data while iterating over the inputs
+        var data = {};
+        data["email"] = form["email"].value;
+        data["password"] = form["password"].value;
+        data["rePassword"] = form["rePassword"].value;
+        data["name"] = form["name"].value;
+        data["surname"] = form["surname"].value;
+        data["roleName"] = form["roleName"].value;
+
+
+        $.ajax({
+            url: apiRoot + '/registration',
+            dataType: 'json',
+            type: 'post',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            processData: false,
+            success: function (data, textStatus, jQxhr) {
+                console.log("ok");
+            },
+            error: function (jqXhr, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
+
+    };
+}
