@@ -174,7 +174,7 @@ var action = 1;
         
           // construct an HTTP request
           var xhr = new XMLHttpRequest();
-          xhr.open(form.method, form.action, true);
+          xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
           xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         
           // send the collected data as JSON
