@@ -177,18 +177,23 @@ $(function () {
       var data = {};
       data["email"] = form["email"].value;
       data["password"] = form["password"].value;
-      
-      // construct an HTTP request
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
-      xhr.setRequestHeader('content-type', 'application/json; charset=UTF-8');
-    
-      // send the collected data as JSON
-      xhr.send(JSON.stringify(data));
-    
-      xhr.onloadend = function () {
-        // done
-        console.log("DUPSKO");
-      };
+
+
+
+      $.ajax({
+        url: 'http://shopgen.pl/dev/api/login',
+        dataType: 'json',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        processData: false,
+        success: function( data, textStatus, jQxhr ){
+            console.log("ok");
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+            console.log( errorThrown );
+        }
+    });
+
     };
 });
