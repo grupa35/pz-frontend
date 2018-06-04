@@ -173,31 +173,14 @@ function prepare_login_form_handler() {
         request_data["email"] = form["email"].value;
         request_data["password"] = form["password"].value;
 
+        let request = new XMLHttpRequest();
+        request.open('POST', apiRoot + '/login', false);
+        request.setRequestHeader('content-type', 'application/json');
+        request.send(JSON.stringify(request_data));
 
-        $.ajax({
-            url: apiRoot + '/login',
-            dataType: 'json',
-            type: 'post',
-            contentType: 'application/json',
-            data: JSON.stringify(request_data),
-            processData: false,
-            success: function (response) {
-                $('#login_block').style = 'display: none;';
-
-                var login_user_data_div = $('#login_user_data');
-                // var current_user_json = get_current_user();
-
-                set_cookie('authorization', response.getResponseHeader('Authorization'));
-
-                // login_user_data_div.add("<p>" +)
-
-                login_user_data_div.style = 'display: block;';
-            },
-            error: function (jqXhr, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-
+        if (request.status === 200) {
+            set_cookie('authorization', request.getResponseHeader('Authorization'));
+        }
     };
 }
 
