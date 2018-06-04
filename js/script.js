@@ -1,10 +1,8 @@
 var action = 1;
+var documentRoot = "http://shopgen.pl/dev";
+var apiRoot = "http://shopgen.pl/dev/api";
 
 $(function () {
-
-    let documentRoot = "http://shopgen.pl/dev";
-    let apiRoot = "http://shopgen.pl/dev/api";
-
     function applyListTriggers(){
         $("button#filtruj").on("click",function(){
             let syntax = "";
@@ -107,7 +105,7 @@ $(function () {
             $("#backCategories").show();
 
             $.getJSON( apiRoot + "/search?"+this.params['rules'], function( data ) {
-                if (!data[0]) $("#listContent").append('<h3>Nic nie znaleziono! :(</h3><a href="/"><h3>Powrót do strony głównej</h3></a>');
+                if (!data[0]) $("#listContent").append('<h3>Nic nie znaleziono! :(</h3><a href="/#"><h3>Powrót do strony głównej</h3></a>');
                 $.each( data, function( index, value ){
                     context.render('views/items/listedProduct.template', {item: data[index], root: documentRoot})
                         .appendTo($("#listContent"));
@@ -177,7 +175,7 @@ function prepare_login_form_handler() {
 
 
         $.ajax({
-            url: 'http://shopgen.pl/dev/api/login',
+            url: apiRoot + '/login',
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
