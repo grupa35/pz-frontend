@@ -2,15 +2,6 @@ var numer = Math.floor(Math.random()*3) + 1;
 var timer1 = 0;
 var timer2 = 0;
 
-function setslide(nr)
-{
-    clearTimeout(timer1);
-    clearTimeout(timer2);
-    numer = nr-1;
-    schowaj();
-    setTimeout("slide()", 500);
-}
-
 function schowaj()
 {
     $("#slider").fadeOut(500);
@@ -28,3 +19,7 @@ function slide()
     timer1= setTimeout("slide()", 4950);
     timer2= setTimeout("schowaj()", 4500);
 }
+
+$(function () {
+    slide();
+})
