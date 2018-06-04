@@ -202,13 +202,13 @@ dt {
 #dane {
     position: absolute;
     float: left;
-    max-width: 50px;
+    max-width: 50%;
     margin-left: 250px;
     margin-top: 80px;
 }
 
 #submit {
-	float: right;
+    float: right;
 	margin-top: 250px;
 	margin-right: 50%;
 	background-color: lightgrey;
