@@ -166,7 +166,7 @@ var action = 1;
   
 })(jQuery);
 
-function login() {
+$(function () {
     var form = document.getElementById("login");
 
     form.onsubmit = function (e) {
@@ -175,8 +175,6 @@ function login() {
     
       // collect the form data while iterating over the inputs
       var data = {};
-
-    
       data[email] = form[email].value;
       data[password] = form[password].value;
       
@@ -193,4 +191,4 @@ function login() {
         console.log("DUPSKO");
       };
     };
-}
+});
