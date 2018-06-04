@@ -180,15 +180,26 @@ function prepare_login_form_handler() {
 
         if (request.status === 200) {
             set_cookie('authorization', request.getResponseHeader('Authorization'));
-            let current_user = get_current_user();
-            $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
-            $('#login').style = 'display: none;';
-            $('#logout').style = 'display: block;';
-            $('#login_user_data').style = 'display: block;';
+            switch_login_items();
         } else {
             alert("Błąd logowania");
         }
     };
+}
+
+function switch_login_items() {
+    if (get_cookie('authorization').length > 0) {
+        let current_user = get_current_user();
+        $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
+        $('#login').hide()
+        $('#logout').show()
+        $('#login_user_data').show()
+    } else {
+        $('#login_user_data').html('');
+        $('#login').show()
+        $('#logout').hide()
+        $('#login_user_data').hide()
+    }
 }
 
 function get_current_user() {
