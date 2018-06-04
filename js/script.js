@@ -181,7 +181,7 @@ $(function () {
       // construct an HTTP request
       var xhr = new XMLHttpRequest();
       xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+      xhr.setRequestHeader('content-type', 'application/json; charset=UTF-8');
     
       // send the collected data as JSON
       xhr.send(JSON.stringify(data));
