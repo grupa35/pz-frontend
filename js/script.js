@@ -169,9 +169,9 @@ function prepare_login_form_handler() {
         e.preventDefault();
 
         // collect the form data while iterating over the inputs
-        var data = {};
-        data["email"] = form["email"].value;
-        data["password"] = form["password"].value;
+        var request_data = {};
+        request_data["email"] = form["email"].value;
+        request_data["password"] = form["password"].value;
 
 
         $.ajax({
@@ -179,9 +179,9 @@ function prepare_login_form_handler() {
             dataType: 'json',
             type: 'post',
             contentType: 'application/json',
-            data: JSON.stringify(data),
+            data: JSON.stringify(request_data),
             processData: false,
-            success: function (data, textStatus, jQxhr) {
+            success: function (response, textStatus, jQxhr) {
                 $('#login_block').style = 'display: none;';
 
                 var login_user_data_div = $('#login_user_data');
