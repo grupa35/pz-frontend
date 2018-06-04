@@ -185,21 +185,13 @@ function prepare_login_form_handler() {
 }
 
 function get_current_user() {
-    let authorization = get_cookie('authorization');
-    $.ajax({
-        url: apiRoot + '/users/current',
-        dataType: 'json',
-        type: 'get',
-        headers: {'Authorization': authorization},
-        contentType: 'application/json',
-        async: false,
-        processData: false,
-        success: function (data, textStatus, jQxhr) {
-            return JSON.parse(data)
-        }
-    });
+    let authorization_token = get_cookie('authorization');
 
-    return '';
+    let request = new XMLHttpRequest();
+    request.open('GET', apiRoot + '/users/current', false);
+    request.setRequestHeader('Authorization', authorization_token);
+    request.send();
+    return JSON.parse(request.response);
 }
 
 function prepare_registration_form_handler() {
