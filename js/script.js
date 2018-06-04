@@ -172,6 +172,9 @@ var action = 1;
             }
           }
         
+          data[email] = form[email].value;
+          data[password] = form[password].value;
+          
           // construct an HTTP request
           var xhr = new XMLHttpRequest();
           xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
