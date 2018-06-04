@@ -272,7 +272,7 @@ function prepare_registration_form_handler() {
 }
 
 function set_cookie(parameter, value) {
-    document.cookie = document.cookie + parameter + '=' + value + ';';
+    document.cookie = parameter + '=' + value + ';';
 }
 
 function get_cookie(parameter) {
