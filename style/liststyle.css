@@ -194,16 +194,16 @@ dt {
 #register {
     position: absolute;
     float: left;
-    max-width: 50%;
+    max-width: 30%;
     margin-left: 50px;
     margin-top: 80px;
 }
 
 #dane {
     position: absolute;
-    float: left;
-    max-width: 50%;
-    margin-left: 250px;
+    float: right;
+    max-width: 30%;
+    margin-right: 50px;
     margin-top: 80px;
 }
 
