@@ -192,6 +192,22 @@ function prepare_login_form_handler() {
     };
 }
 
+function get_current_user() {
+    let authorization = get_cookie('authorization');
+    $.ajax({
+        url: apiRoot + '/users/current',
+        dataType: 'json',
+        type: 'get',
+        headers: {'Authorization': authorization},
+        contentType: 'application/json',
+        async: false,
+        processData: false,
+        success: function (data, textStatus, jQxhr) {
+            return JSON.parse(data)
+        }
+    });
+}
+
 function prepare_registration_form_handler() {
     var form = document.getElementById("registration");
 
@@ -217,7 +233,35 @@ function prepare_registration_form_handler() {
             data: JSON.stringify(data),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                console.log("ok");
+                let json_data = JSON.parse(data);
+                let status_code = json_data['result'];
+
+                if (status_code === 0) {
+                    $('#login_block').style = 'display: none;';
+
+                    var login_user_data_div = $('#login_user_data');
+                    var current_user_json = get_current_user();
+
+                    set_cookie('authorization', jQxhr.getResponseHeader('Authorization'));
+
+                    // login_user_data_div.add("<p>" +)
+
+                    login_user_data_div.style = 'display: block;';
+                } else {
+                    let error_message = '';
+                    if (status_code === 10) {
+                        error_message = 'Wrong email format';
+                    } else if (status_code === 11) {
+                        error_message = 'Email exists';
+                    } else if (status_code === 20) {
+                        error_message = 'Wrong password format';
+                    } else if (status_code === 21) {
+                        error_message = 'Different passwords';
+                    } else {
+                        error_message = 'Unknown error';
+                    }
+                    alert(error_message)
+                }
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
@@ -225,4 +269,12 @@ function prepare_registration_form_handler() {
         });
 
     };
+}
+
+function set_cookie(parameter, value) {
+    document.cookie = document.cookie + parameter + '=' + value + ';';
+}
+
+function get_cookie(parameter) {
+    return document.cookie.match('=(.*?);')[0];
 }
