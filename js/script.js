@@ -182,7 +182,16 @@ function prepare_login_form_handler() {
             data: JSON.stringify(data),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                console.log("ok");
+                $('#login_block').style = 'display: none;';
+
+                var login_user_data_div = $('#login_user_data');
+                var current_user_json = get_current_user();
+
+                set_cookie('authorization', jQxhr.getResponseHeader('Authorization'));
+
+                // login_user_data_div.add("<p>" +)
+
+                login_user_data_div.style = 'display: block;';
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
@@ -237,16 +246,7 @@ function prepare_registration_form_handler() {
                 let status_code = json_data['result'];
 
                 if (status_code === 0) {
-                    $('#login_block').style = 'display: none;';
 
-                    var login_user_data_div = $('#login_user_data');
-                    var current_user_json = get_current_user();
-
-                    set_cookie('authorization', jQxhr.getResponseHeader('Authorization'));
-
-                    // login_user_data_div.add("<p>" +)
-
-                    login_user_data_div.style = 'display: block;';
                 } else {
                     let error_message = '';
                     if (status_code === 10) {
