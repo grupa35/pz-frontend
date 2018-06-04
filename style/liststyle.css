@@ -221,12 +221,7 @@ dt {
 }
 
 #okno_rejestracji {
-	width: 50%;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-	padding-bottom: 10px;
-	padding-top: -20px;
-	border: 2px solid black;
-	border-radius: 8px;
 }
