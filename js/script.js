@@ -157,37 +157,40 @@ var action = 1;
             $("#navbar").append(elements);    
         });
         
-        var form = document.getElementById("login");
-
-        form.onsubmit = function (e) {
-          // stop the regular form submission
-          e.preventDefault();
-        
-          // collect the form data while iterating over the inputs
-          var data = {};
-
-        
-          data[email] = form[email].value;
-          data[password] = form[password].value;
-          
-          // construct an HTTP request
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
-          xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        
-          // send the collected data as JSON
-          xhr.send(JSON.stringify(data));
-        
-          xhr.onloadend = function () {
-            // done
-            console.log("DUPSKO");
-          };
-        };
         
     });
+
 
 
 
   
 })(jQuery);
 
+function login() {
+    var form = document.getElementById("login");
+
+    form.onsubmit = function (e) {
+      // stop the regular form submission
+      e.preventDefault();
+    
+      // collect the form data while iterating over the inputs
+      var data = {};
+
+    
+      data[email] = form[email].value;
+      data[password] = form[password].value;
+      
+      // construct an HTTP request
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'http://shopgen.pl/dev/api/login', true);
+      xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    
+      // send the collected data as JSON
+      xhr.send(JSON.stringify(data));
+    
+      xhr.onloadend = function () {
+        // done
+        console.log("DUPSKO");
+      };
+    };
+}
