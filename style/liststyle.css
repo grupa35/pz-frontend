@@ -201,7 +201,7 @@ dt {
 #dane {
     position: absolute;
     float: left;
-    margin-left: 340px;
+    margin-left: 250px;
     margin-top: 80px;
 }
 
@@ -213,7 +213,7 @@ dt {
 }
 
 .pola {
-	width: 20%;
+	width: 90%;
     border: 1px outset white;
     border-radius: 3px;
 }
