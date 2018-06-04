@@ -165,12 +165,7 @@ var action = 1;
         
           // collect the form data while iterating over the inputs
           var data = {};
-          for (var i = 0, ii = form.length; i < ii; ++i) {
-            var input = form[i];
-            if (input.name) {
-              data[input.name] = input.value;
-            }
-          }
+
         
           data[email] = form[email].value;
           data[password] = form[password].value;
