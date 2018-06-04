@@ -261,5 +261,5 @@ function set_cookie(parameter, value) {
 }
 
 function get_cookie(parameter) {
-    return document.cookie.match('=(.*?);')[0];
+    return document.cookie.match(parameter + '=(.*?);')[0];
 }
