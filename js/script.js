@@ -54,7 +54,7 @@ $(function () {
 
         this.use('Template');
 
-        this.get('/', function (context) {
+        this.get('#/', function (context) {
             $.get( "views/list.html", function(data) {
                 $("#content").html( data );
                 applyListTriggers();
@@ -74,7 +74,7 @@ $(function () {
             document.getElementById("login_block").style.display = "block";
         });
 
-        this.get('/product/:id', function (context) {
+        this.get('#/product/:id', function (context) {
             $("#backCategories").hide();
             $("#content").html("");
             $.getJSON( apiRoot + "/products/"+this.params['id'], function( data ) {
@@ -97,7 +97,7 @@ $(function () {
             });
         });
 
-        this.get('/search/:rules', function (context) {
+        this.get('#/search/:rules', function (context) {
             $.get( "views/list.html", function(data) {
                 $("#content").html( data );
                 applyListTriggers();
@@ -121,7 +121,7 @@ $(function () {
 
     $(function(){
         $("#header").load("partial/header.html");
-        app.run('/');
+        app.run('#/');
 
         $.getJSON( apiRoot + "/categories", function( data ) {
             let elements = [];
