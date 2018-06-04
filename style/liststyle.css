@@ -194,6 +194,7 @@ dt {
 #register {
     position: absolute;
     float: left;
+    max-width: 50%;
     margin-left: 50px;
     margin-top: 80px;
 }
@@ -201,6 +202,7 @@ dt {
 #dane {
     position: absolute;
     float: left;
+    max-width: 50px;
     margin-left: 250px;
     margin-top: 80px;
 }
