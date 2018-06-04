@@ -175,8 +175,8 @@ $(function () {
     
       // collect the form data while iterating over the inputs
       var data = {};
-      data['email'] = form[email].value;
-      data['password'] = form[password].value;
+      data["email"] = form["email"].value;
+      data["password"] = form["password"].value;
       
       // construct an HTTP request
       var xhr = new XMLHttpRequest();
