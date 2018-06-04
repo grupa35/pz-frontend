@@ -180,6 +180,13 @@ function prepare_login_form_handler() {
 
         if (request.status === 200) {
             set_cookie('authorization', request.getResponseHeader('Authorization'));
+            let current_user = get_current_user();
+            $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
+            $('#login').style = 'display: none;';
+            $('#logout').style = 'display: block;';
+            $('#login_user_data').style = 'display: block;';
+        } else {
+            alert("Błąd logowania");
         }
     };
 }
@@ -254,4 +261,11 @@ function set_cookie(parameter, value) {
 
 function get_cookie(parameter) {
     return document.cookie.match(parameter + '=(.*?);')[1];
+}
+
+function logout() {
+    set_cookie('authorization', '');
+    $('#login').style = 'display: block;';
+    $('#login_user_data').style = 'display: none;';
+    $('#logout').style = 'display: none;';
 }
