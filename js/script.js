@@ -215,6 +215,8 @@ function get_current_user() {
             return JSON.parse(data)
         }
     });
+
+    return '';
 }
 
 function prepare_registration_form_handler() {
