@@ -192,13 +192,13 @@ function switch_login_items() {
     if (get_cookie('authorization').length > 0) {
         let current_user = get_current_user();
         $('#login_user_data').html('<p>Cześć, ' + current_user['name']);
-        $('#login').hide();
+        $('#login_block').hide();
         $('#logout').show();
         $('#login_user_data').show();
         $('#log_in').hide();
     } else {
         $('#login_user_data').html('');
-        $('#login').show();
+        // $('#login_block').show();
         $('#logout').hide();
         $('#login_user_data').hide();
         $('#log_in').show();
@@ -275,7 +275,11 @@ function set_cookie(parameter, value) {
 }
 
 function get_cookie(parameter) {
-    return document.cookie.match(parameter + '=(.*?);')[1];
+    let cookie_parameter = document.cookie.match(parameter + '=(.*?);');
+    if (cookie_parameter == null) {
+        return "";
+    }
+    return cookie_parameter[1];
 }
 
 function logout() {
