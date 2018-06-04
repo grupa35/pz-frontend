@@ -181,13 +181,13 @@ function prepare_login_form_handler() {
             contentType: 'application/json',
             data: JSON.stringify(request_data),
             processData: false,
-            success: function (response, textStatus, jQxhr) {
+            success: function (response) {
                 $('#login_block').style = 'display: none;';
 
                 var login_user_data_div = $('#login_user_data');
                 // var current_user_json = get_current_user();
 
-                set_cookie('authorization', jQxhr.getResponseHeader('Authorization'));
+                set_cookie('authorization', response.getResponseHeader('Authorization'));
 
                 // login_user_data_div.add("<p>" +)
 
