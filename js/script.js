@@ -185,7 +185,7 @@ function prepare_login_form_handler() {
                 $('#login_block').style = 'display: none;';
 
                 var login_user_data_div = $('#login_user_data');
-                var current_user_json = get_current_user();
+                // var current_user_json = get_current_user();
 
                 set_cookie('authorization', jQxhr.getResponseHeader('Authorization'));
 
