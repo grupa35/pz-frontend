@@ -182,7 +182,6 @@ function prepare_login_form_handler() {
             set_cookie('authorization', request.getResponseHeader('Authorization'));
             switch_login_items();
             alert("Zalogowano!");
-            document.getElementById("#log_in").style.display = "none";
         } else {
             alert("Błąd logowania");
         }
