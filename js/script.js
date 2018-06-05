@@ -181,6 +181,7 @@ function prepare_login_form_handler() {
         if (request.status === 200) {
             set_cookie('authorization', request.getResponseHeader('Authorization'));
             switch_login_items();
+            alert("Zalogowano!");
         } else {
             alert("Błąd logowania");
         }
