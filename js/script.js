@@ -242,8 +242,7 @@ function prepare_registration_form_handler() {
             data: JSON.stringify(data),
             processData: false,
             success: function (data, textStatus, jQxhr) {
-                let json_data = JSON.parse(data);
-                let status_code = json_data['result'];
+                let status_code = data['result'];
 
                 if (status_code === 0) {
 
